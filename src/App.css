@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  height: 100vh;
+}
+
+.loading-screen {
+  position: fixed;
+  border: 2px solid gray;
+  padding: 5px;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.loading-circle {
+  padding: 2px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-top: 4px solid gray;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+header h1 {
+  margin-top: 20px;
+}
+
+header p {
+  margin: 20px;
+  text-align: justify;
+}
+
+.nav {
+  z-index: 1;
+  background-color: green;
+  position: fixed;
+  background-color: gray;
+  padding: 10px;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  left: -42px;
+  transition: left 0.5s ease-in;
+}
+
+.nav button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.nav:hover {
+  left: 0;
+  cursor: pointer;
+}
+
+main {
+  margin-left: 20%;
+  margin-right: 20%;
+  align-self: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  justify-content: space-around;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+main form section {
+  position: relative;
+  padding: 3rem;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+main form h1 {
+  padding: 10px;
+  left: 0;
+  top: -24px;
+  background-color: white;
+  position: absolute;
+}
+
+main form section input {
+  border: 2px solid gray;
+  width: 250px;
+  min-width: 0;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.experience {
+  border-bottom: none;
+}
+form button {
+  min-width: 20px;
+  max-width: 100px;
+  width: 100px;
+  align-self: center;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  background-color: gray;
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 578px) {
+  main,
+  header {
+    margin: 0;
+  }
+}
